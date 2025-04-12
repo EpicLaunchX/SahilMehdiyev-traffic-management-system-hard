@@ -38,8 +38,7 @@ class Intersection:
     def __repr__(self):
         """
         Return a string representation of the intersection.
-
         Returns:
             str: String representation.
         """
-        return f"Intersection(id='{self.id}', connected_roads={self.connected_roads})"
+        return f"Intersection(id={self.id!r}, connected_roads={self.connected_roads})"
