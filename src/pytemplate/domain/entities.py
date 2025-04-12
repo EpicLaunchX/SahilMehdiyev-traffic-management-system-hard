@@ -17,7 +17,15 @@ class Intersection:
         Args:
             id (str): Unique identifier for the intersection.
             connected_roads (List[str]): List of road identifiers connected to this intersection.
+
+        Raises:
+            TypeError: If id is not a string or connected_roads is not a list of strings.
         """
+        if not isinstance(id, str):
+            raise TypeError("id must be a string")
+        if not isinstance(connected_roads, list) or not all(isinstance(road, str) for road in connected_roads):
+            raise TypeError("connected_roads must be a list of strings")
+
         self.id = id
         self.connected_roads = connected_roads
 
@@ -38,6 +46,7 @@ class Intersection:
     def __repr__(self):
         """
         Return a string representation of the intersection.
+
         Returns:
             str: String representation.
         """
