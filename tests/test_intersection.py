@@ -2,7 +2,7 @@ import pytest
 from hypothesis import assume, given
 from hypothesis import strategies as st
 
-from pytemplate.domain.entities import Intersection
+from src.pytemplate.domain.entities import Intersection
 
 
 class TestIntersection:
